@@ -1,0 +1,1058 @@
+/* Sass Document */
+
+sass styles-tt.scss styles-tt.css
+	
+*
+  position: relative
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  outline: 0 !important
+
+$font-p: 'Muli', sans-serif
+$font-s: 'Oswald', sans-serif
+$font-fa: 'FontAwesome'
+//$font-s: 'Montserrat', sans-serif
+//$font-3: 'Teko', sans-serif
+$negro-p: #222222
+$gray-p: #39393c
+$gray-02: #888888
+$rojo-p: #bf2324
+$naranja-p: #f08221
+$bgi-rojo-p: url(../images-tt/bg/bg-red-01.png)
+
+$headings: h1 h2 h3 h4 h5 h6
+
+body, html
+  font: 13px $font-p
+  font-size: 13px
+  color: white
+  height: 100%
+  min-height: 100%
+  background-color: $negro-p
+
+@mixin headings($from: 1, $to: 6)
+  @for $i from $from through $to
+    h#{$i}
+      @content
+	
+@include headings()
+  font-family: $font-s
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 1rem
+
+h1
+  font-size: 38px
+  margin-bottom: 3rem
+
+h4
+  font-family: $font-p
+  font-size: 16px
+  font-weight: 900
+  margin-bottom: 1rem
+
+h5
+  font-size: 17px
+  font-weight: 300
+  & b
+    font-weight: 900
+
+p
+  font-size: 13px
+  line-height: 22px
+  margin-bottom: 2rem
+  &:last-child,
+  &:only-child
+    margin-bottom: 1rem
+  
+
+a
+  color: $naranja-p
+  text-decoration: none !important
+  display: inline-block
+  &:hover
+    color: white
+
+footer,
+.open-nav-footer
+  & li
+    margin-bottom: 8px
+  & a
+    color: rgba(255,255,255,.6)
+    &:hover
+      color: $naranja-p
+	
+hr
+  border-color: $rojo-p
+
+.fa
+  font-size: 18px
+
+/* --- HEADER --- */
+header
+  width: 100%
+  height: auto !important
+  background: $rojo-p
+  background-image: $bgi-rojo-p
+  border-bottom: 1px solid rgba(55,55,55,1)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  & a
+    font-size: 11px
+    color: white
+  & a:hover
+    color: rgba(255,255,255,.5)
+  & nav
+    background-color: $negro-p
+    & li
+      display: inline-block
+    & a
+      font-family: $font-s
+      font-size: 17px
+      text-transform: uppercase
+      padding: 10px
+    & a:hover,
+    & a.active
+      color: $naranja-p
+  & .dropdown-menu
+    border: none
+    border-radius: 0
+    & a
+      color: $negro-p
+  & .cont-logo img
+    width: auto
+    max-height: 150px    
+  &.scrolldown .cont-logo img
+    height: 70px
+  & .cont-h-search-01 input
+    font-size: 15px
+    color: $negro-p
+    background: white
+	
+/* --- CONTENIDOS --- */
+.box-sec-01
+  width: 100%
+  &:after
+    content: ""
+    width: 100%
+    height: 80%
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 1
+    opacity: 0
+    pointer-events: none
+    background: rgba(160,9,10,0)
+    background: -moz-linear-gradient(top, rgba(160,9,10,0) 0%, rgba(160,9,10,0.8) 100%)
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(160,9,10,0)), color-stop(100%, rgba(160,9,10,0.8)))
+    background: -webkit-linear-gradient(top, rgba(160,9,10,0) 0%, rgba(160,9,10,0.8) 100%)
+    background: -o-linear-gradient(top, rgba(160,9,10,0) 0%, rgba(160,9,10,0.8) 100%)
+    background: -ms-linear-gradient(top, rgba(160,9,10,0) 0%, rgba(160,9,10,0.8) 100%)
+    background: linear-gradient(to bottom, rgba(160,9,10,0) 0%, rgba(160,9,10,0.8) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0090a', endColorstr='#a0090a', GradientType=0 )
+  & .layer-overlay-01
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,1)
+    position: absolute
+    top: 0
+    left: 0
+    opacity: .7
+    pointer-events: none
+    .device-mobile &
+      opacity: .4
+  & .info
+    width: 100%
+    height: auto
+    padding: 20px 
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 3
+    pointer-events: none
+    & p
+      max-height: 0px
+      display: block
+      opacity: 0
+      .device-mobile &
+        max-height: none
+        opacity: 1
+  &:hover
+    & .layer-overlay-01
+      opacity: .1
+    & p
+      max-height: 200px
+      opacity: 1
+    & .cropcenter-img img
+      transform: scale(1.01)
+      -webkit-transform: scale(1.01)
+      -ms-transform: scale(1.01)
+    &:hover:after
+      opacity: 1
+	
+	
+	
+.carrousel-secs-01
+  & .owl-stage-outer,
+  & .owl-stage,
+  & .owl-item
+    height: 100%
+
+/* --- TITLES --- */
+.title-style-01
+  font-family: $font-s
+  font-size: 40px
+  font-weight: 200
+
+/* --- SLIDER ---*/
+.ms-skin-default
+  & .ms-nav-next,
+  & .ms-nav-prev
+    width: 100px
+    height: 100%
+    font-family: $font-fa
+    font-size: 50px
+    position: absolute
+    top: 0
+    cursor: pointer
+  & .ms-nav-next
+    right: 0
+  & .ms-nav-prev:before,
+  & .ms-nav-next:before
+    content: "\f053"
+    position: absolute
+    margin: auto
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%,-50%)
+  & .ms-nav-next:before	
+    content: "\f054"
+		
+.ms-slide
+  & .ms-img,
+  & .ms-anim-layers
+    width: 100%
+    height: 100%
+  & .ms-img.cropcenter-img
+    max-width: none	
+	
+.ms-text
+  max-width: 600px
+  padding: 40px !important
+  & h1
+    font-size: 60px
+    color: white
+    margin-bottom: 10px
+  & p
+    color: white
+    padding: 5px
+    background-color: $rojo-p
+    display: inline
+    box-shadow: 5px 0 0 $rojo-p, -5px 0 0 $rojo-p
+
+/* -- BANNERS -- */
+
+[class*=cont-item-],
+[class*=cont-banner-]
+  overflow: hidden
+  & img
+    opacity: .9
+    -webkit-transition-duration: 1.5s !important
+    transition-duration: 1.5s !important
+  &:hover img
+    opacity: 1	
+    transform: scale(1.03)
+  & article
+    max-width: 80%
+    padding: 15px 20px
+    position: absolute
+    left: 0
+    bottom: 10px
+    z-index: 10
+    pointer-events: none
+    & a
+      color: white
+      pointer-events: auto
+    & h2
+      font-size: 30px
+      margin-bottom: 10px
+    & h3
+      font-family: $font-s
+      font-size: 20px
+      font-weight: 300
+    & p
+      padding: 5px
+      background-color: $rojo-p
+      display: inline
+      box-shadow: 5px 0 0 $rojo-p, -5px 0 0 $rojo-p
+  &.text-center article
+    margin: auto
+    right: 0
+  & li:before
+    content: "-"
+    display: inline-block
+    vertical-align: super
+    margin: 0 6px 0 0
+  & li:first-child:before
+    display: none
+  & li a
+    color: $naranja-p
+    &:hover
+      color: white
+  &.cont-banner-02
+    & article
+      max-width: 100%
+      padding: 10px 0
+      position: relative
+      bottom: 0
+      & p
+        padding: 0 15px
+        background-color: transparent 
+        display: inline-block
+        box-shadow: none
+        &:before
+          content: ""
+          width: 100%
+          height: 1000%
+          background-color: $rojo-p
+          position: absolute
+          top: -5px
+          left: 0
+          z-index: -1
+          pointer-events: none
+		
+[class*=cont-item-]
+  & article
+    & h2
+      font-size: 22px
+      margin-bottom: 10px	
+	
+.contg-list-items-01
+  &:hover
+    & .cont-item-01
+      opacity: .7
+      &:hover
+        opacity: 1
+	
+.cont-count-items-01
+  width: 100%
+  height: 100%
+  font-size: 30px
+  font-weight: 900
+  text-align: center
+  background-color: rgba(0,0,0,.5)
+  position: absolute
+  z-index: 2
+  & span
+    display: block
+
+	
+/* --- GALLERYS --- */
+.cont-gallery-01
+  &:hover .owl-item
+    opacity: .3
+    &:hover
+      opacity: 1
+ 
+/* --- BREADCRUMB --- /*
+.breadcrumb
+  & a
+    color: $negro-p
+    &.active
+      font-weight: 900
+  & .breadcrumb-item::before
+    content: "|"
+	
+	
+/* --- BTN --- */
+.btn-circular-01
+  width: 40px
+  height: 40px
+  color: white
+  background-color: $rojo-p
+  border-radius: 100%
+
+.btn-p,
+.btn-primary,
+.btn-secondary,
+.btn-dark
+  width: 100%
+  font-size: 16px
+  color: white !important
+  font-weight: 900
+  text-transform: uppercase
+  text-align: center
+  padding: 12px
+  background-color: $rojo-p
+  border: none
+  &[disabled]
+    background-color: $rojo-p
+  &.btn-secondary,
+  &.btn-secondary[disabled]
+    background: $naranja-p
+    &:hover
+      background: rgba($naranja-p, .7)
+  &.btn-dark,
+  &.btn-secondary[disabled]
+    background: $gray-p
+    &:hover
+      background: rgba($gray-p, .7)		
+  &:hover
+    background: rgba($rojo-p, .7)
+    opacity: 1	
+  &[disabled]
+    pointer-events: none
+    opacity: .3
+ 
+/* --- MODAL --- */
+.modal-content
+  color: $negro-p
+  border-color: rgba(65,65,65,1)
+  &.bgc-black-01
+    color: white
+    & .modal-header
+      background: rgba(0,0,0,1)
+      border: none
+    & .close
+      color: $rojo-p
+      text-shadow: none
+ 
+/* --- PAGINATION --- */
+
+/* --- OTHERS ---*/
+.elem-hidde_show-01
+  &.hidde-p
+    visibility: hidden
+    opacity: 0
+    -webkit-transform: translateY(1px) 
+    transform: translateY(1px)		
+  &.show-p
+    visibility: visible
+    opacity: 1
+    -webkit-transform: translateY(0) 
+    transform: translateY(0)	
+	
+/* --- DECO --- */
+.bgc-black-01
+  background-color: $negro-p
+
+.bgc-black-02
+  background-color: #000
+  & *
+    color: white
+  & a:hover
+    color: $rojo-p
+  & .active
+    color: $naranja-p
+  & .pagination
+    & .page-link
+      font-weight: 700
+      padding: .5rem .5rem
+      background-color: transparent
+      border: none
+
+.bg-white
+  & a:hover
+    color: $negro-p
+
+.border-t-red-01
+  border-top: 1px solid $rojo-p
+
+.border-b-red-01
+  border-bottom: 1px solid $rojo-p
+
+.box-shadow-01
+  box-shadow: 0px 10px 100px rgba(0,0,0,.4)
+
+.tx-shadow-01
+  text-shadow: rgba(4, 7, 13, 0.2) 0px 2px 2px, rgba(4, 7, 13, 0.2) 0px 4px 4px, rgba(4, 7, 13, 0.1) 0px 8px 8px, rgba(4, 7, 13, 0.1) 0px 16px 16px
+
+.crois
+  width: 16px
+  height: 16px
+  background-image: url(../images-tt/svg/crois-deco.svg)
+  position: absolute
+  z-index: 10
+  &:nth-last-child(1)
+    bottom: -8px
+    right: -8px
+  &:nth-last-child(2)
+    bottom: -8px
+    left: -8px
+  &:nth-last-child(3)
+    top: -8px
+    right: -8px
+  &:nth-last-child(4)
+    top: -8px
+    left: -8px
+
+
+/* --- BOOTSTRAP --- */
+dl, ol, ul 
+  margin-top: 0
+  margin-bottom: 2rem
+
+ul
+  padding-left: 25px
+  article & li
+    line-height: 22px
+	
+.mega-dropdown
+  position: static !important
+  & .dropdown-menu
+    top: 99% !important
+    transform: none !important
+
+.dropdown-menu-right 
+  right: 0
+  left: auto !important
+
+.device-mobile
+  .dropdown-menu-right 
+    right: auto
+
+
+/* --- LIST --- */
+.menu-list-style-01
+  & li
+    padding-left: 6px
+    padding-right: 6px
+    &:before
+      content: ""
+      width: 5px
+      height: 5px
+      background-color: $naranja-p
+      display: inline-block
+      margin: auto
+      position: absolute
+      left: -6px
+      top: 2px
+      bottom: 0
+      border-radius: 100%
+  & li:first-child
+    padding-left: 0	
+  & li:first-child:before
+    display: none
+  & li:last-child
+    padding-right: 0
+  & .dropdown-menu
+    & li
+      margin-bottom: 8px
+      margin-top: 8px
+      padding: 0
+      &:before
+        display: none
+      & a
+        font-size: 13px
+        &:hover
+          color: $naranja-p
+	
+.menu-style-white
+  & a
+    color: white
+    &:hover
+      opacity: .5
+    &.active
+      color: $naranja-p
+
+/* --- WIDTH --- */
+.max-width-01
+  max-width: 1100px
+
+.width-100vw
+  width: 100vw 
+
+.width-50vw
+  width: 50vw 
+
+.width-300
+  width: 300px
+
+.width-270
+  width: 270px
+
+.width-200
+  width: 200px 
+
+/* --- HEIGHT --- */
+.hv-100
+  min-height: 100vh
+
+.mxh-350
+  max-height: 350px
+
+/* --- MARGIN --- */
+.m-auto
+  margin: auto
+
+.mt-30
+  margin-top: 30px
+
+.mt-10
+  margin-top: 10px
+
+.mb-50
+  margin-bottom: 50px
+
+.mb-10
+  margin-bottom: 10px
+
+.mb-5
+  margin-bottom: 5px
+
+.mtb-30
+  margin-top: 30px
+  margin-bottom: 30px
+
+.mtb-20
+  margin-top: 20px
+  margin-bottom: 20px 
+
+.mtb-10
+  margin-top: 10px
+  margin-bottom: 10px 
+
+/* --- PADDING --- */
+.ptb-25
+  padding-top: 25px
+  padding-bottom: 25px
+
+.pt-80
+  padding-top: 80px
+
+.ptb-80
+  padding-top: 80px
+  padding-bottom: 80px
+
+/* --- POSITION ---*/
+.left-0
+  left: 0
+  right: auto
+
+.right-0
+  right: 0
+  left: auto
+
+.top-0
+  top: 0
+
+.bottom-0
+  bottom: 0
+
+/* --- COLOR ---*/
+.clr-white
+  color: white
+
+.clr-orange
+  color: $naranja-p
+
+.clr-rojo
+  color: $rojo-p
+
+.clr-gray
+  color: $gray-02
+  border-color: $gray-p
+
+/* --- SIZE --- */
+.f-size-60
+  font-size: 60px
+
+.f-size-40
+  font-size: 40px
+
+.f-size-35
+  font-size: 35px
+
+.f-size-30
+  font-size: 30px
+
+.f-size-25
+  font-size: 25px
+
+.f-size-20
+  font-size: 20px
+
+.f-size-18
+  font-size: 18px
+
+.f-size-15
+  font-size: 15px
+
+/* --- TEXT --- */
+.line-through
+  text-decoration: line-through
+
+/* --- IMG ---*/
+.cropcenter-img
+  overflow: hidden
+  & img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+  & a
+    width: 100%
+    height: 100%
+    display: block
+
+/* --- OVERFLOW ---*/
+.overflow-hidden
+  overflow: hidden
+
+.overflow-y-auto
+  overflow-y: auto
+
+.overflow-x-auto
+  overflow-y: auto
+  overflow-x: hidden
+
+/* --- Z-INDEX --- */
+.z-index-1
+  z-index: 1
+
+.z-index-5
+  z-index: 5
+
+/* --- FORMS --- */
+input, textarea, select
+  font-weight: bold
+  width: 100%
+  max-height: 150px
+  //color: white
+  padding: 13px 8px
+  //background: transparent
+  border: 1px solid rgba(0,0,0,.3)
+
+button
+  background-color: transparent
+  border: none
+  cursor: pointer
+  &:hover
+    opacity: .6
+	
+	
+@mixin placeholder 
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content 
+
+.bgc-black-02
+  @include placeholder
+    font-weight: 300
+    color: $naranja-p
+	
+*[readonly]
+  div &
+    color: White
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid $gray-p
+
+	
+input,
+select,
+textarea
+  &.bgc-black-02
+    color: $naranja-p
+    text-transform: uppercase
+    -webkit-appearance: none
+    appearance: none
+    -moz-appearance: none		
+  &.bgc-black-02:focus
+    color: white
+
+input[type=checkbox],
+input[type=radio]
+  width: 20px
+  height: 20px
+  cursor: pointer
+  -webkit-appearance: none
+  appearance: none
+  border: none
+  + span 
+    cursor: pointer !important
+  &:checked:before
+    color: $naranja-p
+  &:before
+    font-family: $font-fa
+    font-size: 19px
+    color: $gray-p
+    content: "\f00c"
+    display: block
+
+input[type=radio]
+  &:before
+    content: "\f111"
+	
+select.bgc-black-02
+  padding-right: 30px
+  background-image: url(../images-tt/svg/arrow-d.svg)
+  background-repeat: no-repeat
+  background-position: center right
+  box-sizing: inherit
+
+select.bgc-white-01
+  color: $gray-p
+  background-color: white
+  background-image: url(../images-tt/svg/arrow-d.svg)
+
+
+.width_tmp_select
+  width: auto
+  display: none
+  padding: 0
+
+
+/* --- TRANSITION--- */
+a,
+input,
+button,
+label.error,
+input:before,
+.cont-logo img,
+.elem-hidde_show-01,
+.collapse-panel-md-01,
+.collapse-panel-sm-01,
+.cont-banner-01 img,
+.cont-gallery-01 .owl-item,
+.cont-item-01,
+.layer-overlay-01,
+.box-sec-01:after,
+.box-sec-01 .info p,
+.box-sec-01 .cropcenter-img img
+  -webkit-transition: all 400ms cubic-bezier(0.520,0.005,0.000,0.995)
+  -moz-transition: all 400ms cubic-bezier(0.520,0.005,0.000,0.995)
+  -o-transition: all 400ms cubic-bezier(0.520,0.005,0.000,0.995)
+  transition: all 400ms cubic-bezier(0.520,0.005,0.000,0.995)
+  -webkit-transition-timing-function: cubic-bezier(0.520,0.005,0.000,0.995)
+  -moz-transition-timing-function: cubic-bezier(0.520,0.005,0.000,0.995)
+  -o-transition-timing-function: cubic-bezier(0.520,0.005,0.000,0.995)
+  transition-timing-function: ubic-bezier(0.520,0.005,0.000,0.995)
+
+/* --- OWL ---*/
+.owl-01,
+.owl-03
+  & .owl-nav
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+    pointer-events: none
+    & .owl-prev,
+    & .owl-next
+      width: 90px
+      height: 100%
+      pointer-events: auto
+    & .owl-next
+      float: right
+	
+.owl-03
+  & .owl-prev,
+  & .owl-next
+    width: 50px !important
+	
+.owl-02
+  & .owl-dots
+    text-align: center
+    margin-top: 10px
+    & button
+      width: 10px
+      height: 10px
+      margin: 5px
+      background-color: white
+      display: inline-block
+      border-radius: 100%
+      &.active
+        background-color: $naranja-p
+
+/* --- iSCROLL ---*/
+#wrapper 
+  overflow: hidden
+
+#scroller 
+  position: absolute
+  z-index: 1
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-transform: translateZ(0)
+  -moz-transform: translateZ(0)
+  -ms-transform: translateZ(0)
+  -o-transform: translateZ(0)
+  transform: translateZ(0)
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-text-size-adjust: none
+  -moz-text-size-adjust: none
+  -ms-text-size-adjust: none
+  -o-text-size-adjust: none
+  text-size-adjust: none
+
+.iScrollVerticalScrollbar
+  right: 3px !important
+
+.iScrollIndicator
+  background: $rojo-p !important
+  border: none !important
+	
+/* --- IF MOBILE --- */
+.mobile-visible
+  display: none
+  body.device-mobile &
+    display: inline-block 
+
+.mobile-hidden
+  display: none 
+  body:not(.device-mobile) &.mobile-hidden
+    display: inline-block
+	
+.device-mobile .ms-skin-default
+  & .ms-nav-next,
+  & .ms-nav-prev
+    display: none !important
+	
+	
+/* --- EKKO LIGHTBO --- */
+.ekko-lightbox
+  & .modal-body
+    padding: 0
+  & .modal-dialog
+    margin: 10px !important
+
+/* --- BUG --- */	
+.bug-flashmove
+  backface-visibility: hidden
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -ms-backface-visibility: hidden  
+  -webkit-transform: translate3d(0,0,0)
+  -moz-transform: translate3d(0,0,0)
+  -ms-transform: translate3d(0,0,0)
+  transform: translate3d(0,0,0)
+
+/*---------------------- RESPONSIVE ------------------------*/
+
+@media screen and (max-width:992px)
+  /* --- SLIDER ---*/
+  .ms-text
+    max-width: none
+    left: 0
+    right: 0
+	
+  /* --- MENU R ---*/
+  .collapse-panel-md-01
+    width: 100%
+    height: 100%
+    background-color: rgba($negro-p, .98)
+    position: fixed !important
+    top: 0
+    left: 0
+    z-index: 200
+    overflow: auto
+    &.close-p
+      -webkit-transform: translateX(-100%)
+      -moz-transform: translateX(-100%) 
+      -ms-transform: translateX(-100%)
+      -o-transform: translateX(-100%) 
+      transform: translateX(-100%)
+    &.open-p
+      -webkit-transform: translateX(-0%)
+      -moz-transform: translateX(0%) 
+      -ms-transform: translateX(0%)
+      -o-transform: translateX(0%) 
+      transform: translateX(0%)	
+	
+    /* --- WIDTH --- */
+    .width-md-100
+      width: 100%	
+	
+	
+@media screen and (max-width:767px)
+  h1
+    font-size: 30px
+		
+  p
+    font-size: 13px
+	
+  /* --- HEADER --- */
+  header
+    & .cont-logo img,
+    &.scrolldown .cont-logo img
+      max-height: 45px
+    & .collapse-panel-sm-01 li
+      width: 100%
+    & nav .dropdown-menu 
+      position: relative !important
+	
+  /* --- MENU R ---*/
+  .collapse-panel-sm-01
+    width: 100%
+    height: 100%
+    background-color: rgba($negro-p, .98)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 200
+    overflow: auto
+    &.close-p
+      -webkit-transform: translateX(-100%)
+      -moz-transform: translateX(-100%) 
+      -ms-transform: translateX(-100%)
+      -o-transform: translateX(-100%) 
+      transform: translateX(-100%)
+    &.open-p
+      -webkit-transform: translateX(-0%)
+      -moz-transform: translateX(0%) 
+      -ms-transform: translateX(0%)
+      -o-transform: translateX(0%) 
+      transform: translateX(0%)
+
+  /* --- TITLES --- */
+  .title-style-01
+    font-size: 28px
+	
+  /* --- SLIDER ---*/
+  .ms-text
+    padding: 15px !important	
+    & h1
+      font-size: 30px
+	
+  /* --- CONTENIDOS --- */
+  .box-sec-01
+    & .info
+      padding: 10px
+      & p
+        font-size: 13px
+        line-height: 18px
+	
+  /* --- WIDTH --- */
+  .width-sm-100
+    width: 100%	
+	
+
+@media screen and (max-width:576px)	
+	
+  /* -- BANNERS -- */
+  [class*=cont-banner-]
+    & article
+      max-width: 100%
+      padding: 5px 10px
+      bottom: 5px
+      & h2
+        font-size: 22px
+      & h3
+        font-size: 16px
