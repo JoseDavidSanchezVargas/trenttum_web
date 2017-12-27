@@ -720,14 +720,26 @@ ul
   z-index: 5
 
 /* --- FORMS --- */
+select
+  padding-right: 30px
+  background-image: url(../images-tt/svg/arrow-d-black.svg)
+  background-repeat: no-repeat
+  background-position: center right
+  box-sizing: inherit
+
 input, textarea, select
   font-weight: bold
   width: 100%
   max-height: 150px
   //color: white
   padding: 13px 8px
-  //background: transparent
+  background-color: white
   border: 1px solid rgba(0,0,0,.3)
+  border-radius: 0
+  -webkit-appearance: none
+  -moz-appearance:    none
+  appearance:         none	
+
 
 button
   background-color: transparent
@@ -776,6 +788,7 @@ input[type=checkbox],
 input[type=radio]
   width: 20px
   height: 20px
+  background-color: transparent
   cursor: pointer
   -webkit-appearance: none
   appearance: none
@@ -796,11 +809,8 @@ input[type=radio]
     content: "\f111"
 	
 select.bgc-black-02
-  padding-right: 30px
   background-image: url(../images-tt/svg/arrow-d.svg)
-  background-repeat: no-repeat
-  background-position: center right
-  box-sizing: inherit
+  
 
 select.bgc-white-01
   color: $gray-p

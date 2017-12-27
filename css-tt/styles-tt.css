@@ -470,163 +470,166 @@ article ul li { line-height: 22px; }
 
 /* --- FORMS --- */
 /* line 723, styles-tt.sass */
-input, textarea, select { font-weight: bold; width: 100%; max-height: 150px; padding: 13px 8px; border: 1px solid rgba(0, 0, 0, 0.3); }
+select { padding-right: 30px; background-image: url(../images-tt/svg/arrow-d-black.svg); background-repeat: no-repeat; background-position: center right; box-sizing: inherit; }
 
-/* line 732, styles-tt.sass */
+/* line 730, styles-tt.sass */
+input, textarea, select { font-weight: bold; width: 100%; max-height: 150px; padding: 13px 8px; background-color: white; border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+/* line 744, styles-tt.sass */
 button { background-color: transparent; border: none; cursor: pointer; }
-/* line 736, styles-tt.sass */
+/* line 748, styles-tt.sass */
 button:hover { opacity: 0.6; }
 
-/* line 741, styles-tt.sass */
+/* line 753, styles-tt.sass */
 .bgc-black-02::-webkit-input-placeholder { font-weight: 300; color: #f08221; }
-/* line 743, styles-tt.sass */
+/* line 755, styles-tt.sass */
 .bgc-black-02:-moz-placeholder { font-weight: 300; color: #f08221; }
-/* line 745, styles-tt.sass */
+/* line 757, styles-tt.sass */
 .bgc-black-02::-moz-placeholder { font-weight: 300; color: #f08221; }
-/* line 747, styles-tt.sass */
+/* line 759, styles-tt.sass */
 .bgc-black-02:-ms-input-placeholder { font-weight: 300; color: #f08221; }
 
-/* line 756, styles-tt.sass */
+/* line 768, styles-tt.sass */
 div *[readonly] { color: White; background-color: transparent; border: none; border-bottom: 1px solid #39393c; }
 
-/* line 766, styles-tt.sass */
+/* line 778, styles-tt.sass */
 input.bgc-black-02, select.bgc-black-02, textarea.bgc-black-02 { color: #f08221; text-transform: uppercase; -webkit-appearance: none; appearance: none; -moz-appearance: none; }
-/* line 772, styles-tt.sass */
+/* line 784, styles-tt.sass */
 input.bgc-black-02:focus, select.bgc-black-02:focus, textarea.bgc-black-02:focus { color: white; }
 
-/* line 775, styles-tt.sass */
-input[type=checkbox], input[type=radio] { width: 20px; height: 20px; cursor: pointer; -webkit-appearance: none; appearance: none; border: none; }
-/* line 783, styles-tt.sass */
-input[type=checkbox] + span, input[type=radio] + span { cursor: pointer !important; }
-/* line 785, styles-tt.sass */
-input[type=checkbox]:checked:before, input[type=radio]:checked:before { color: #f08221; }
 /* line 787, styles-tt.sass */
+input[type=checkbox], input[type=radio] { width: 20px; height: 20px; background-color: transparent; cursor: pointer; -webkit-appearance: none; appearance: none; border: none; }
+/* line 796, styles-tt.sass */
+input[type=checkbox] + span, input[type=radio] + span { cursor: pointer !important; }
+/* line 798, styles-tt.sass */
+input[type=checkbox]:checked:before, input[type=radio]:checked:before { color: #f08221; }
+/* line 800, styles-tt.sass */
 input[type=checkbox]:before, input[type=radio]:before { font-family: "FontAwesome"; font-size: 19px; color: #39393c; content: ""; display: block; }
 
-/* line 795, styles-tt.sass */
+/* line 808, styles-tt.sass */
 input[type=radio]:before { content: ""; }
 
-/* line 798, styles-tt.sass */
-select.bgc-black-02 { padding-right: 30px; background-image: url(../images-tt/svg/arrow-d.svg); background-repeat: no-repeat; background-position: center right; box-sizing: inherit; }
+/* line 811, styles-tt.sass */
+select.bgc-black-02 { background-image: url(../images-tt/svg/arrow-d.svg); }
 
-/* line 805, styles-tt.sass */
+/* line 815, styles-tt.sass */
 select.bgc-white-01 { color: #39393c; background-color: white; background-image: url(../images-tt/svg/arrow-d.svg); }
 
-/* line 811, styles-tt.sass */
+/* line 821, styles-tt.sass */
 .width_tmp_select { width: auto; display: none; padding: 0; }
 
 /* --- TRANSITION--- */
-/* line 818, styles-tt.sass */
+/* line 828, styles-tt.sass */
 a, input, button, label.error, input:before, .cont-logo img, .elem-hidde_show-01, .collapse-panel-md-01, .collapse-panel-sm-01, .cont-banner-01 img, .cont-gallery-01 .owl-item, .cont-item-01, .layer-overlay-01, .box-sec-01:after, .box-sec-01 .info p, .box-sec-01 .cropcenter-img img { -webkit-transition: all 400ms cubic-bezier(0.52, 0.005, 0, 0.995); -moz-transition: all 400ms cubic-bezier(0.52, 0.005, 0, 0.995); -o-transition: all 400ms cubic-bezier(0.52, 0.005, 0, 0.995); transition: all 400ms cubic-bezier(0.52, 0.005, 0, 0.995); -webkit-transition-timing-function: cubic-bezier(0.52, 0.005, 0, 0.995); -moz-transition-timing-function: cubic-bezier(0.52, 0.005, 0, 0.995); -o-transition-timing-function: cubic-bezier(0.52, 0.005, 0, 0.995); transition-timing-function: ubic-bezier(0.52, 0.005, 0, 0.995); }
 
 /* --- OWL --- */
-/* line 846, styles-tt.sass */
+/* line 856, styles-tt.sass */
 .owl-01 .owl-nav, .owl-03 .owl-nav { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
-/* line 854, styles-tt.sass */
+/* line 864, styles-tt.sass */
 .owl-01 .owl-nav .owl-prev, .owl-01 .owl-nav .owl-next, .owl-03 .owl-nav .owl-prev, .owl-03 .owl-nav .owl-next { width: 90px; height: 100%; pointer-events: auto; }
-/* line 859, styles-tt.sass */
+/* line 869, styles-tt.sass */
 .owl-01 .owl-nav .owl-next, .owl-03 .owl-nav .owl-next { float: right; }
 
-/* line 863, styles-tt.sass */
+/* line 873, styles-tt.sass */
 .owl-03 .owl-prev, .owl-03 .owl-next { width: 50px !important; }
 
-/* line 868, styles-tt.sass */
-.owl-02 .owl-dots { text-align: center; margin-top: 10px; }
-/* line 871, styles-tt.sass */
-.owl-02 .owl-dots button { width: 10px; height: 10px; margin: 5px; background-color: white; display: inline-block; border-radius: 100%; }
 /* line 878, styles-tt.sass */
+.owl-02 .owl-dots { text-align: center; margin-top: 10px; }
+/* line 881, styles-tt.sass */
+.owl-02 .owl-dots button { width: 10px; height: 10px; margin: 5px; background-color: white; display: inline-block; border-radius: 100%; }
+/* line 888, styles-tt.sass */
 .owl-02 .owl-dots button.active { background-color: #f08221; }
 
 /* --- iSCROLL --- */
-/* line 882, styles-tt.sass */
+/* line 892, styles-tt.sass */
 #wrapper { overflow: hidden; }
 
-/* line 885, styles-tt.sass */
+/* line 895, styles-tt.sass */
 #scroller { position: absolute; z-index: 1; -webkit-tap-highlight-color: transparent; -webkit-transform: translateZ(0); -moz-transform: translateZ(0); -ms-transform: translateZ(0); -o-transform: translateZ(0); transform: translateZ(0); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -o-text-size-adjust: none; text-size-adjust: none; }
 
-/* line 905, styles-tt.sass */
+/* line 915, styles-tt.sass */
 .iScrollVerticalScrollbar { right: 3px !important; }
 
-/* line 908, styles-tt.sass */
+/* line 918, styles-tt.sass */
 .iScrollIndicator { background: #bf2324 !important; border: none !important; }
 
 /* --- IF MOBILE --- */
-/* line 913, styles-tt.sass */
+/* line 923, styles-tt.sass */
 .mobile-visible { display: none; }
-/* line 915, styles-tt.sass */
+/* line 925, styles-tt.sass */
 body.device-mobile .mobile-visible { display: inline-block; }
 
-/* line 918, styles-tt.sass */
+/* line 928, styles-tt.sass */
 .mobile-hidden { display: none; }
-/* line 920, styles-tt.sass */
+/* line 930, styles-tt.sass */
 body:not(.device-mobile) .mobile-hidden.mobile-hidden { display: inline-block; }
 
-/* line 924, styles-tt.sass */
+/* line 934, styles-tt.sass */
 .device-mobile .ms-skin-default .ms-nav-next, .device-mobile .ms-skin-default .ms-nav-prev { display: none !important; }
 
 /* --- EKKO LIGHTBO --- */
-/* line 931, styles-tt.sass */
+/* line 941, styles-tt.sass */
 .ekko-lightbox .modal-body { padding: 0; }
-/* line 933, styles-tt.sass */
+/* line 943, styles-tt.sass */
 .ekko-lightbox .modal-dialog { margin: 10px !important; }
 
 /* --- BUG --- */
-/* line 937, styles-tt.sass */
+/* line 947, styles-tt.sass */
 .bug-flashmove { backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 /*---------------------- RESPONSIVE ------------------------ */
 @media screen and (max-width: 992px) { /* --- SLIDER --- */
-  /* line 951, styles-tt.sass */
+  /* line 961, styles-tt.sass */
   .ms-text { max-width: none; left: 0; right: 0; }
   /* --- MENU R --- */
-  /* line 957, styles-tt.sass */
+  /* line 967, styles-tt.sass */
   .collapse-panel-md-01 { width: 100%; height: 100%; background-color: rgba(34, 34, 34, 0.98); position: fixed !important; top: 0; left: 0; z-index: 200; overflow: auto; /* --- WIDTH --- */ }
-  /* line 966, styles-tt.sass */
+  /* line 976, styles-tt.sass */
   .collapse-panel-md-01.close-p { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
-  /* line 972, styles-tt.sass */
+  /* line 982, styles-tt.sass */
   .collapse-panel-md-01.open-p { -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -ms-transform: translateX(0%); -o-transform: translateX(0%); transform: translateX(0%); }
-  /* line 980, styles-tt.sass */
+  /* line 990, styles-tt.sass */
   .collapse-panel-md-01 .width-md-100 { width: 100%; } }
-@media screen and (max-width: 767px) { /* line 985, styles-tt.sass */
+@media screen and (max-width: 767px) { /* line 995, styles-tt.sass */
   h1 { font-size: 30px; }
-  /* line 988, styles-tt.sass */
+  /* line 998, styles-tt.sass */
   p { font-size: 13px; }
   /* --- HEADER --- */
-  /* line 993, styles-tt.sass */
+  /* line 1003, styles-tt.sass */
   header .cont-logo img, header.scrolldown .cont-logo img { max-height: 45px; }
-  /* line 996, styles-tt.sass */
+  /* line 1006, styles-tt.sass */
   header .collapse-panel-sm-01 li { width: 100%; }
-  /* line 998, styles-tt.sass */
+  /* line 1008, styles-tt.sass */
   header nav .dropdown-menu { position: relative !important; }
   /* --- MENU R --- */
-  /* line 1002, styles-tt.sass */
+  /* line 1012, styles-tt.sass */
   .collapse-panel-sm-01 { width: 100%; height: 100%; background-color: rgba(34, 34, 34, 0.98); position: fixed; top: 0; left: 0; z-index: 200; overflow: auto; }
-  /* line 1011, styles-tt.sass */
+  /* line 1021, styles-tt.sass */
   .collapse-panel-sm-01.close-p { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
-  /* line 1017, styles-tt.sass */
+  /* line 1027, styles-tt.sass */
   .collapse-panel-sm-01.open-p { -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -ms-transform: translateX(0%); -o-transform: translateX(0%); transform: translateX(0%); }
   /* --- TITLES --- */
-  /* line 1025, styles-tt.sass */
+  /* line 1035, styles-tt.sass */
   .title-style-01 { font-size: 28px; }
   /* --- SLIDER --- */
-  /* line 1029, styles-tt.sass */
+  /* line 1039, styles-tt.sass */
   .ms-text { padding: 15px !important; }
-  /* line 1031, styles-tt.sass */
+  /* line 1041, styles-tt.sass */
   .ms-text h1 { font-size: 30px; }
   /* --- CONTENIDOS --- */
-  /* line 1036, styles-tt.sass */
+  /* line 1046, styles-tt.sass */
   .box-sec-01 .info { padding: 10px; }
-  /* line 1038, styles-tt.sass */
+  /* line 1048, styles-tt.sass */
   .box-sec-01 .info p { font-size: 13px; line-height: 18px; }
   /* --- WIDTH --- */
-  /* line 1043, styles-tt.sass */
+  /* line 1053, styles-tt.sass */
   .width-sm-100 { width: 100%; } }
 @media screen and (max-width: 576px) { /* -- BANNERS -- */
-  /* line 1051, styles-tt.sass */
+  /* line 1061, styles-tt.sass */
   [class*=cont-banner-] article { max-width: 100%; padding: 5px 10px; bottom: 5px; }
-  /* line 1055, styles-tt.sass */
+  /* line 1065, styles-tt.sass */
   [class*=cont-banner-] article h2 { font-size: 22px; }
-  /* line 1057, styles-tt.sass */
+  /* line 1067, styles-tt.sass */
   [class*=cont-banner-] article h3 { font-size: 16px; } }
 
 /*# sourceMappingURL=styles-tt.css.map */
